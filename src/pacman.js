@@ -1,6 +1,6 @@
 
-var Grid = (function(window, document) {
-
+var Grid = (function(window, document) {	
+	
 	var create = function(el, w, h) {
 	
 		for(var i=0; i<w; i++) {
@@ -17,7 +17,7 @@ var Grid = (function(window, document) {
 		
 		return {
 		
-			
+			//load : load;
 		};
 	};
 	

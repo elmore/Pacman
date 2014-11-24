@@ -36,11 +36,19 @@ describe("Grid", function() {
 	
 		var grid = new Grid.Create(div, 4, 4);
 		
-		var pattern = '####\
-					   ####\
-					   ####\
-					   ####';
+		var pattern =  [[['black'],['white'],['black'],['white']],
+						[['white'],['black'],['white'],['black']],
+						[['black'],['white'],['black'],['white']],
+						[['white'],['black'],['white'],['red']]];
 		
+		grid.load(pattern);
 		
+		var whiteCells = document.getElementsByClassName('white');
+		var blackCells = document.getElementsByClassName('black');
+		var redCells = document.getElementsByClassName('red');
+		
+		expect(whiteCells.length).toBe(8);
+		expect(blackCells.length).toBe(7);
+		expect(redCells.length).toBe(1);
 	});	
 });
